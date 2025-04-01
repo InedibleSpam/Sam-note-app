@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Go to store",
+    "body": "I need to go to the store later to buy some things",
+    "color": "#f38c8c",
+    "starred": false,
+    "createdAt": "2025-03-26T23:10:02.382Z",
+    "updatedAt": "2025-04-01T01:46:00.285Z"
+  },
+  {
+    "id": 2,
+    "title": "hi",
+    "body": "hey",
+    "color": "#e8a1a1",
+    "starred": false,
+    "createdAt": "2025-04-01T01:53:08.628Z",
+    "updatedAt": "2025-04-01T01:53:08.628Z"
+  },
+  {
+    "id": 3,
+    "title": "hello",
+    "body": "hi",
+    "color": "#cb5cff",
+    "starred": false,
+    "createdAt": "2025-04-01T01:53:59.702Z",
+    "updatedAt": "2025-04-01T02:28:45.636Z"
+  },
+  {
+    "id": 4,
+    "title": "hey there",
+    "body": "hi how are you",
+    "color": "#000000",
+    "starred": false,
+    "createdAt": "2025-04-01T01:54:17.274Z",
+    "updatedAt": "2025-04-01T02:28:44.697Z"
+  }
+]

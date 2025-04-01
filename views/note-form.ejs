@@ -1,0 +1,32 @@
+<%- include('layout'); -%>
+    <title>
+        <%= note ? "Edit Note" : "New Note" %>
+    </title>
+    </head>
+
+    <body>
+        <div class="note-form-container">
+            <h1>
+                <%= note ? "Edit Note" : "New Note" %>
+            </h1>
+
+            <form action="/" method="POST">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="<%= note ? note.title : '' %>" required
+                    placeholder="Enter note title">
+
+                <label for="body">Body:</label>
+                <textarea name="body" id="body" required
+                    placeholder="Enter note content"><%= note ? note.body : '' %></textarea>
+
+                <label for="color">Color:</label>
+                <input type="color" name="color" id="color" value="<%= note ? note.color : '#ffffff' %>">
+
+                <button type="submit">Save</button>
+            </form>
+
+            <a href="/" class="back-link">Back to Notes</a>
+        </div>
+    </body>
+
+    </html>

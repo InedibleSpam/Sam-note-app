@@ -1,0 +1,59 @@
+<%- include('layout'); -%>
+  <title>Notes</title>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>My Notes</h1>
+    </div>
+
+    <div class="search">
+      <form action="/search" method="GET">
+        <input type="text" name="query" placeholder="Search notes..." required>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <% if (query) { %>
+      <div class="search-results">
+        <h2>Search Results for: "<%= query %>"</h2>
+        <% if (notes.length===0) { %>
+          <p>No notes found matching your search.</p>
+          <% } %>
+      </div>
+      <% } %>
+
+        <div class="new-note">
+          <a href="/new">Create New Note</a>
+        </div>
+
+        <div class="container">
+          <ul>
+            <% notes.forEach(note=> { %>
+              <li style="background-color: <%= note.color %>;">
+                <strong>
+                  <%= note.title %>
+                </strong>
+                <p>
+                  <%= note.body %>
+                </p>
+                <div class="star">
+                  <form action="/<%= note.id %>/star" method="POST" style="display:inline;">
+                    <button type="submit">
+                      <%= note.starred ? "⭐ Unstar" : "☆ Star" %>
+                    </button>
+                  </form>
+                </div>
+                <div class="edit">
+                  <a href="/<%= note.id %>/edit">Edit</a>
+                  <form action="/<%= note.id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                  </form>
+                </div>
+              </li>
+              <% }) %>
+          </ul>
+        </div>
+  </body>
+
+  </html>
